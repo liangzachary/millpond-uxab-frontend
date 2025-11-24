@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import logo from './Mill Pond Research Logo - Horizontal - 100.png';
-import './Navbar.css'; 
+import logo from '../assets/Mill Pond Research Logo - Horizontal - 100.png';
+import './Navbar.css';
 
 const Navbar = () => {
     return (
@@ -27,9 +27,7 @@ const Navbar = () => {
                     </li>
                 </ul>
                 <div>
-                    <button className="button-primary">
-                        Get Started
-                    </button>
+                    <Link to="/contactus" className="button-primary">Get Started</Link>
                 </div>
             </div>
         </nav>

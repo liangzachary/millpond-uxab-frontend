@@ -1,8 +1,12 @@
 #root {
-  max-width: 1280px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
 .logo {
@@ -110,9 +114,25 @@
 
 .hero-banner {
   text-align: center;
-  padding-left: 200px;
-  padding-right: 200px;
+  padding-left: 175px;
+  padding-right: 175px;
+  padding-top: 125px;
+  padding-bottom: 125px;
   background-color: #F5EFE7;
+  width: 100%;
+  
+}
+
+.regular-banner-white {
+  text-align: center;
+  padding: 50px;
+  background-color: white;
   width: 100%;
 }
 
+.regular-banner-sand {
+  text-align: center;
+  padding: 50px;
+  background-color: #F5EFE7;
+  width: 100%;
+}
