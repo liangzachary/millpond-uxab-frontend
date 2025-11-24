@@ -136,3 +136,39 @@ html, body {
   background-color: #F5EFE7;
   width: 100%;
 }
+
+.risks-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 48px;
+  margin-top: 40px;
+}
+
+.risk-item {
+  max-width: 320px;
+}
+
+.risk-icon-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 9999px;
+  border: 1px solid #1F4E79;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px auto;
+}
+
+.risk-title {
+  font-size: 20px;
+  font-family: 'Sora', sans-serif;
+  font-weight: 500;
+  color: #1F4E79;
+  margin-bottom: 8px;
+}
+
+.risk-body {
+  font-size: 14px;
+  color: #4B4B4B;
+}
