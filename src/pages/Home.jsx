@@ -1,5 +1,5 @@
-import Navbar from "../Navbar";
-import Footer from "../Footer";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 import HeroSection from "../components/home/HeroSection";
 import StrategyRisksSection from "../components/home/StrategyRisksSection";
