@@ -2,28 +2,28 @@ const risks = [
   {
     title: "Invisible AI Agents",
     body: "Invisible AI agents operating across your network, accessing sensitive data without your knowledge.",
-    icon: "👁️", // swap for SVG later
+    icon: "eye", 
   },
   {
     title: "Security Gaps",
     body: "Security gaps that put your organization at risk as AI tools proliferate beyond IT oversight.",
-    icon: "🛡️",
+    icon: "shield",
   },
   {
     title: "Departmental AI Silos",
     body: "Departmental AI silos that prevent you from realizing the full ROI of your technology investments.",
-    icon: "👥",
+    icon: "people",
   },
   {
     title: "Data Exposure",
     body: "Customer and proprietary data exposure that could damage trust and compliance.",
-    icon: "🔒",
+    icon: "lock",
   },
 ];
 
 function StrategyRisksSection() {
   return (
-    <section className="regular-banner-white flex flex-col items-center px-6 py-20">
+    <section className="regular-banner-white flex flex-col items-center">
       {/* Heading */}
       <div className="max-w-4xl text-center">
         <h2 className="section-header mb-4" style={{ color: "#1F4E79" }}>
@@ -43,7 +43,7 @@ function StrategyRisksSection() {
               className="flex flex-col items-center text-center"
             >
               <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-[#1F4E79]">
-                <span className="text-2xl" aria-hidden="true">
+                <span className="t-2xl" aria-hidden="true">
                   {risk.icon}
                 </span>
               </div>

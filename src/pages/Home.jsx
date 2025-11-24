@@ -1,5 +1,5 @@
-import Header from "../components/layout/Header";
-import Footer from "../components/layout/Footer";
+import Navbar from "../Navbar";
+import Footer from "../Footer";
 
 import HeroSection from "../components/home/HeroSection";
 import StrategyRisksSection from "../components/home/StrategyRisksSection";
@@ -15,7 +15,7 @@ import ContactSection from "../components/home/ContactSection";
 function Home() {
   return (
     <>
-      <Header />
+      <Navbar />
       <main className="flex flex-col">
         <HeroSection />
         <StrategyRisksSection />
