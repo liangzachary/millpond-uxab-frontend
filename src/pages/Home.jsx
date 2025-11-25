@@ -15,7 +15,6 @@ import ContactSection from "../components/home/ContactSection";
 function Home() {
   return (
     <>
-      <Navbar />
       <main className="flex flex-col">
         <HeroSection />
         <StrategyRisksSection />
@@ -28,7 +27,6 @@ function Home() {
         <RoiSection />
         <ContactSection />
       </main>
-      <Footer />
     </>
   );
 }
