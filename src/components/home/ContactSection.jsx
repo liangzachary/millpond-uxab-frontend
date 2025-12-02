@@ -47,21 +47,18 @@ function ContactSection() {
 
   return (
     <section className="regular-banner-white px-6 py-20">
-      <div className="mx-auto flex max-w-4xl flex-col items-center gap-8">
+      <div className="mx-auto flex max-w-7xl flex-col items-center gap-8">
         <div className="text-center">
           <h2 className="section-header" style={{ color: "#1F4E79" }}>
             Ready to Take Control of Your AI Future?
           </h2>
-          <p
-            className="mt-2 text-base leading-relaxed"
-            style={{ color: "#4B4B4B" }}
-          >
+          <p className="subheader mx-2">
             Contact us to discover how Mill Pond Research can evolve your
             organization's approach to AI security and orchestration.
           </p>
         </div>
 
-        <div className="w-full rounded-2xl bg-[#E2ECF4] p-8 text-left shadow-sm">
+        <div className="w-full rounded-2xl bg-[#E2ECF4] p-8 text-left shadow-sm max-w-4xl">
           <div id="hubspot-form-main" data-hs-forms-root="true" />
 
           <button

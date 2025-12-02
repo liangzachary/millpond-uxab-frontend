@@ -1,7 +1,18 @@
+import coinstack from "../../assets/coin-stack.svg";
+import warning from "../../assets/alert-triangle.svg";
+import shield from "../../assets/shield.svg";
+
+
 const metrics = [
-  { label: "50% lower AI Cost" },
-  { label: "50% lower Data Risk" },
-  { label: "3M+ Protected Prompts" },
+  { label: "30% ↓ AI Cost",
+    icon: coinstack,
+  },
+  { label: "50% ↓ Data Risk",
+    icon: warning,
+  },
+  { label: "5M+ Protected Prompts",
+    icon: shield,
+  },
 ];
 
 function RoiSection() {
@@ -11,17 +22,18 @@ function RoiSection() {
         <h2 className="section-header" style={{ color: "#1F4E79" }}>
           ROI Metrics.
         </h2>
-        <p className="mt-2 text-sm leading-relaxed" style={{ color: "#4B4B4B" }}>
+        <p className="subheader mt-2" style={{ color: "#4B4B4B" }}>
           See measurable impact across your entire AI ecosystem.
         </p>
 
-        <div className="mt-8 flex flex-wrap justify-center gap-4">
+        <div className="mt-8 flex flex-wrap justify-center gap-6">
           {metrics.map((metric) => (
             <div
               key={metric.label}
-              className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#1F4E79] shadow-sm ring-1 ring-[#E5E7EB]"
+              className="flex items-center gap-3 rounded-full bg-white px-8 py-4 text-base font-semibold text-[#1F4E79] shadow-sm ring-1 ring-[#E5E7EB]"
             >
-              {metric.label}
+              <img src={metric.icon} alt={metric.label} className="h-6 w-6" />
+              <p className="text-base font-semibold text-[#1F4E79]">{metric.label}</p>
             </div>
           ))}
         </div>

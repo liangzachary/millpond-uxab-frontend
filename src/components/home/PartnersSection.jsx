@@ -74,18 +74,14 @@ function PartnersSection() {
           ))}
         </div>
 
-        <div className="mt-10 flex flex-col items-center gap-2 rounded-2xl bg-[#F5EFE7] p-6 text-center shadow-sm">
-          <p
-            className="text-xs font-semibold uppercase tracking-[0.18em]"
-            style={{ color: "#567C8D" }}
-          >
-            Partnership
-          </p>
-          <p className="text-base font-semibold" style={{ color: "#1F4E79" }}>
+        <div className="mt-10 flex flex-col items-center gap-2 rounded-2xl bg-[#F5EFE7] p-6 text-center shadow-sm mx-4 md:mx-12 lg:mx-24 xl:mx-48">
+          <img src={aws} alt="AWS Logo" className="h-12 w-12" />
+          <p className="subheader" style={{ color: "#1F4E79" }}>
             AWS genAI partnership announced
           </p>
-          <p className="text-xs" style={{ color: "#4B4B4B" }}>
-            Nov 1 2024
+          <p className="small-font" style={{ color: "#4B4B4B" }}>
+            Malesuada facilisi libero, nam eu. Quis pellentesque tortor a elementum ut blandit sed pellentesque arcu. 
+            Malesuada in faucibus risus velit diam. Non, massa ut a arcu, fermentum, vel interdum.
           </p>
         </div>
       </div>
