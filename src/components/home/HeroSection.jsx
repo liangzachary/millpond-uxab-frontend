@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function HeroSection() {
   return (
     <section className="regular-banner-sand flex items-center justify-center px-6 py-20">
@@ -6,13 +8,13 @@ function HeroSection() {
           Secure the Future for Enterprise AI.
         </h1>
 
-        <h3 className="subheader" style={{ color: "#4B4B4B", marginBottom:'6rem'}}>
+        <h3 className="subheader mb-12" style={{ color: "#4B4B4B"}}>
           Prompt-based protection that empowers safe, efficient AI adoption.
         </h3>
 
-        <div className="mt-8 flex flex-wrap justify-center" style={{ gap: '1rem' }}>
-          <button className="button-primary" style={{ marginRight: '1.5rem' }}>Request a Demo</button>
-          <button className="button-secondary">Explore Solutions</button>
+        <div className="flex flex-wrap justify-center" style={{ gap: '2rem' }}>
+          <Link to="/contactus" className="button-primary">Request a Demo</Link>
+          <Link to="/solutions/xilos" className="button-secondary">Explore Solutions</Link>
         </div>
       </div>
     </section>

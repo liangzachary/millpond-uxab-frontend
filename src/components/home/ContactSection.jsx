@@ -57,7 +57,7 @@ function ContactSection() {
             style={{ color: "#4B4B4B" }}
           >
             Contact us to discover how Mill Pond Research can evolve your
-            organization&apos;s approach to AI security and orchestration.
+            organization's approach to AI security and orchestration.
           </p>
         </div>
 

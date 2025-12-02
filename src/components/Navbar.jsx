@@ -18,9 +18,9 @@ const Navbar = () => {
                         onMouseEnter={() => setIsSolutionsOpen(true)}
                         onMouseLeave={() => setIsSolutionsOpen(false)}
                     >
-                        <Link to="/solutions" className="navbar-link">
+                        <p className="navbar-link">
                             Solutions
-                        </Link>
+                        </p>
                         {isSolutionsOpen && (
                             <>
                                 <div className="dropdown-bridge"></div>

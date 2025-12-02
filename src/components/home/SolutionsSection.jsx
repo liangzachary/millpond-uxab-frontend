@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import workbenchPic from "../../assets/WorkBenchPhoto.svg";
 import xilosPic from "../../assets/XilosPhoto.svg";
 
@@ -72,7 +73,7 @@ function SolutionsSection() {
                   ))}
                 </ul> */}
 
-                <button className="mt-5 button-primary">Explore WorkBench</button>
+                <Link to="/solutions/workbench" className="mt-5 button-primary inline-block">Explore WorkBench</Link>
               </div>
 
               {/* Right Column */}
@@ -115,7 +116,7 @@ function SolutionsSection() {
                 </p>
 
                 <div className="flex flex-wrap gap-3 justify-end mt-5">
-                  <button className="button-primary">Explore Xilos</button>
+                  <Link to="/solutions/xilos" className="button-primary">Explore Xilos</Link>
                 </div>
               </div>
 

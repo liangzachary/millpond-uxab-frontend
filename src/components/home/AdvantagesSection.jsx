@@ -1,27 +1,42 @@
+import visibility from "../../assets/eye.svg";
+import protection from "../../assets/shield.svg";
+import unify from "../../assets/share.svg";
+import compliance from "../../assets/lock.svg"; 
+import ecosystem from "../../assets/users.svg";
+import optimize from "../../assets/coin-stack.svg";
+
+
+
 const advantages = [
   {
     title: "Visibility",
     body: "Full oversight of assistant activity and data movement across your environment.",
+    icon: visibility,
   },
   {
     title: "Protection",
     body: "Enforce data masking, prompt guardrails, and policy compliance in real time.",
+    icon: protection,
   },
   {
     title: "Unify",
     body: "Connect AI governance with your existing enterprise security stack and workflows.",
+    icon: unify,
   },
   {
     title: "Compliance",
     body: "Continuous controls to meet industry and regulatory requirements with confidence.",
+    icon: compliance,
   },
   {
     title: "Ecosystem",
     body: "Works across assistants, agents, and data sources to keep teams aligned.",
+    icon: ecosystem,
   },
   {
     title: "Optimize",
     body: "Insights to reduce AI cost while improving usage quality and safety.",
+    icon: optimize,
   },
 ];
 
@@ -39,13 +54,15 @@ function AdvantagesSection() {
           {advantages.map((item) => (
             <div
               key={item.title}
-              className="flex flex-col gap-3 rounded-2xl bg-white p-6 text-left shadow-sm ring-1 ring-[#E5E7EB]"
+              className="flex flex-col items-center gap-3 rounded-2xl bg-white p-6 text-center shadow-sm ring-1 ring-[#E5E7EB]"
             >
-              <div className="h-10 w-10 rounded-full bg-[#E2ECF4]" />
-              <h4 className="text-lg font-semibold" style={{ color: "#1F4E79" }}>
+              <div className="h-10 w-10 rounded-full mt-2">
+                <img src={item.icon} alt={item.title} className="h-10 w-10" />
+              </div>
+              <h4 className="subheader" style={{ color: "#1F4E79", fontWeight: '350' }}>
                 {item.title}
               </h4>
-              <p className="text-sm leading-relaxed" style={{ color: "#4B4B4B" }}>
+              <p className="small-font mx-4 mb-2" style={{ color: "#4B4B4B" }}>
                 {item.body}
               </p>
             </div>
