@@ -1,14 +1,18 @@
 import { useEffect } from "react";
 
+/**
+ * ContactSection embeds a HubSpot form for lead capture. It also shows
+ * fallback content if the form fails to load. The section uses the
+ * design system for typography, layout and buttons. A blurred shape
+ * floats behind the form container for subtle decoration.
+ */
 function ContactSection() {
   useEffect(() => {
     const scriptId = "hs-form-script";
-
     function showFallback() {
       const btn = document.getElementById("fallback-button");
       if (btn) btn.style.display = "block";
     }
-
     function createForm() {
       if (window.hbspt && window.hbspt.forms) {
         try {
@@ -27,9 +31,7 @@ function ContactSection() {
         showFallback();
       }
     }
-
     const existingScript = document.getElementById(scriptId);
-
     if (!existingScript) {
       const script = document.createElement("script");
       script.id = scriptId;
@@ -46,24 +48,19 @@ function ContactSection() {
   }, []);
 
   return (
-    <section className="regular-banner-white px-6 py-20">
+    <section className="regular-banner-white relative overflow-hidden px-6 py-20">
       <div className="mx-auto flex max-w-4xl flex-col items-center gap-8">
         <div className="text-center">
-          <h2 className="section-header" style={{ color: "#1F4E79" }}>
+          <h2 className="section-header">
             Ready to Take Control of Your AI Future?
           </h2>
-          <p
-            className="mt-2 text-base leading-relaxed"
-            style={{ color: "#4B4B4B" }}
-          >
+          <p className="large-font mt-2">
             Contact us to discover how Mill Pond Research can evolve your
-            organization&apos;s approach to AI security and orchestration.
+            organization's approach to AI security and orchestration.
           </p>
         </div>
-
-        <div className="w-full rounded-2xl bg-[#E2ECF4] p-8 text-left shadow-sm">
+        <div className="card w-full bg-sky text-left">
           <div id="hubspot-form-main" data-hs-forms-root="true" />
-
           <button
             id="fallback-button"
             className="button-primary mt-6"
@@ -74,6 +71,10 @@ function ContactSection() {
           </button>
         </div>
       </div>
+      <div
+        className="decorative-shape shape-blue shape-lg"
+        style={{ right: "-10%", top: "40%" }}
+      />
     </section>
   );
 }

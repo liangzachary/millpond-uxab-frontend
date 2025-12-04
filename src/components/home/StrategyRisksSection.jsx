@@ -3,68 +3,75 @@ import shieldoff from "../../assets/shield-off.svg";
 import users from "../../assets/users.svg";
 import lock from "../../assets/lock.svg";
 
-
+// List of common risks used in the strategy section. Each item contains
+// a title, description and icon. Icons are imported above from the
+// assets folder. This data drives the grid of risk cards below.
 const risks = [
   {
     title: "Invisible AI Agents",
-    body: "Invisible AI agents operating across your network, accessing sensitive data without your knowledge.",
-    icon: eye, 
+    body:
+      "Invisible AI agents operating across your network, accessing sensitive data without your knowledge.",
+    icon: eye,
   },
   {
     title: "Security Gaps",
-    body: "Security gaps that put your organization at risk as AI tools proliferate beyond IT oversight.",
+    body:
+      "Security gaps that put your organization at risk as AI tools proliferate beyond IT oversight.",
     icon: shieldoff,
   },
   {
     title: "Departmental AI Silos",
-    body: "Departmental AI silos that prevent you from realizing the full ROI of your technology investments.",
+    body:
+      "Departmental AI silos that prevent you from realizing the full ROI of your technology investments.",
     icon: users,
   },
   {
     title: "Data Exposure",
-    body: "Customer and proprietary data exposure that could damage trust and compliance.",
+    body:
+      "Customer and proprietary data exposure that could damage trust and compliance.",
     icon: lock,
   },
 ];
 
+/**
+ * StrategyRisksSection displays a callout about hidden risks in AI deployments.
+ * It features a heading, subheading and a responsive grid of four items
+ * outlining common challenges. Styles rely on the design system defined
+ * in App.css: section backgrounds, typography classes and utility helpers
+ * avoid inline colour definitions. A decorative blurred shape floats behind
+ * the content to give visual interest.
+ */
 function StrategyRisksSection() {
   return (
-    <section className="regular-banner-white flex flex-col items-center">
-      {/* Heading */}
-      <div className="max-w-4xl text-center">
-        <h2 className="section-header mb-4" style={{ color: "#1F4E79" }}>
+    <section className="regular-banner-white relative overflow-hidden">
+      <div className="mx-auto max-w-4xl text-center">
+        {/* Section heading and subheading */}
+        <h2 className="section-header mb-4">
           Evolve Your AI Strategy with Complete Control.
         </h2>
-        <h3 className="subheader" style={{ color: "#4B4B4B" }}>
+        <h3 className="subheader">
           Traditional AI management creates hidden risks. Mill Pond turns them into insight.
         </h3>
       </div>
 
-      {/* 2x2 grid */}
-      <div className="mx-24 my-12 w-full max-w-4xl">
-        <div className="grid gap-12 grid-cols-2" style={{ gap: '5rem', margin: '0 auto', width: '100%' }}>
-          {risks.map((risks) => (
-            <div key={risks.title} className="flex flex-col items-center text-center">
-              
-              {/* icon */}
-              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full">
-                <img src={risks.icon} alt={risks.title} className="h-10 w-10" />
-              </div>
-
-              {/* title */}
-              <h4 className="mb-2 text-xl font-semibold" style={{ color: "#1F4E79" }}>
-                {risks.title}
-              </h4>
-
-              {/* description */}
-              <p className="text-sm leading-relaxed" style={{ color: "#4B4B4B" }}>
-                {risks.body}
-              </p>
-
+      {/* Grid of risks */}
+      <div className="risks-grid">
+        {risks.map((risk) => (
+          <div key={risk.title} className="risk-item text-center">
+            <div className="risk-icon-circle">
+              <img src={risk.icon} alt={risk.title} className="h-8 w-8" />
             </div>
-          ))}
-        </div>
+            <h4 className="risk-title">{risk.title}</h4>
+            <p className="risk-body">{risk.body}</p>
+          </div>
+        ))}
       </div>
+
+      {/* Decorative shape floating behind content */}
+      <div
+        className="decorative-shape shape-blue shape-lg"
+        style={{ top: "50%", left: "85%" }}
+      />
     </section>
   );
 }

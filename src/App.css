@@ -17,6 +17,18 @@
   --fs-body-lg: 18px;  /* Large body */
   --fs-body: 16px;     /* Regular body */
   --fs-caption: 14px;  /* Meta text */
+
+  /* SPACING SCALE */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+
+  /* SHADOW */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 /* ROOT LAYOUT */
@@ -220,7 +232,6 @@ body {
   padding: 3rem 2rem;
 }
 
-
 .hero-banner,
 .hero-banner-surface,
 .regular-banner-white,
@@ -231,7 +242,6 @@ body {
   box-sizing: border-box;
   text-align: center;
 }
-
 
 .risks-grid {
   display: flex;
@@ -268,4 +278,138 @@ body {
 .risk-body {
   font-size: var(--fs-caption);
   color: var(--color-slate);
+}
+
+/* UTILITY CLASSES */
+
+/* Text colors */
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-primary-alt {
+  color: var(--color-primary-alt);
+}
+
+.text-slate {
+  color: var(--color-slate);
+}
+
+/* Background colors */
+.bg-sand {
+  background-color: var(--color-sand);
+}
+
+.bg-surface {
+  background-color: var(--color-surface);
+}
+
+.bg-white {
+  background-color: var(--color-white);
+}
+
+/* Additional background utility for the sky blue accent */
+.bg-sky {
+  background-color: var(--color-sky);
+}
+
+/* Spacing helper */
+.mb-large {
+  margin-bottom: 6rem;
+}
+
+/* Button group for evenly spaced buttons */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Card component */
+.card {
+  background-color: var(--color-white);
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-xl);
+}
+
+/* Metric chip used in ROI section */
+.metrics-chip {
+  display: inline-block;
+  border-radius: 9999px;
+  background-color: var(--color-white);
+  padding: 0.5rem 1rem;
+  font-size: var(--fs-body);
+  font-weight: 600;
+  color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid #E5E7EB;
+}
+
+/* Comparison table container used in the approach section */
+.comparison-table {
+  background-color: var(--color-white);
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-xl) var(--space-2xl);
+}
+
+.comparison-table .header-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  border-bottom: 1px solid #E5E7EB;
+  padding-bottom: 1.5rem;
+}
+
+.comparison-table .row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.comparison-table .row:last-child {
+  border-bottom: none;
+}
+
+.comparison-table .cell-title {
+  flex: 1;
+  text-align: left;
+  padding-right: 1rem;
+}
+
+.comparison-table .cell-indicator {
+  width: 8rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Decorative blurred shapes for backgrounds */
+.decorative-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.shape-blue {
+  background: radial-gradient(circle at center, rgba(200, 217, 230, 0.6), rgba(200, 217, 230, 0));
+}
+
+.shape-sand {
+  background: radial-gradient(circle at center, rgba(245, 239, 231, 0.6), rgba(245, 239, 231, 0));
+}
+
+.shape-xl {
+  width: 500px;
+  height: 500px;
+}
+
+.shape-lg {
+  width: 350px;
+  height: 350px;
 }
