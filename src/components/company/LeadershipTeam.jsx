@@ -18,25 +18,25 @@ const team = [
 
 function LeadershipTeam() {
   return (
-    <section className="regular-banner-blue flex flex-col items-center">
+    <section className="regular-banner-blue px-6 py-4 md:py-6 flex flex-col items-center">
       {/* Heading */}
-      <div className="max-w-4xl text-center">
-        <h2 className="section-header mb-4" style={{ color: "#1F4E79" }}>
+      <div className="text-center">
+        <h2 className="section-header mb-4 text-3xl md:text-4xl lg:text-5xl" style={{ color: "#1F4E79" }}>
           Meet Our Leadership Team.
         </h2>
-        <h3 className="subheader" style={{ color: "#4B4B4B" }}>
+        <h3 className="subheader mx-4" style={{ color: "#4B4B4B" }}>
           Our passionate team is dedicated to empowering organizations with secure AI governance solutions that turn shadow AI into competitive advantage.
         </h3>
       </div>
 
       {/* grid */}
-      <div className="flex flex-row gap-48 justify-center items-start w-full mt-12 max-w-6xl" style={{ gap: '5rem' }}>
+      <div className="flex flex-wrap justify-center gap-24 items-start w-full mt-6 md:mt-8 max-w-6xl">
         {team.map((member) => (
-          <div key={member.name} className="flex flex-col items-center text-center px-4 w-56 max-w-xs">
+          <div key={member.name} className="flex flex-col items-center text-center px-4 w-full md:w-80 lg:max-w-sm">
 
             {/* image */}
-            <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-[#1F4E79]">
-              <img src={member.icon} alt={member.name} className="h-10 w-10" />
+            <div className="mb-4 flex h-48 w-48 items-center justify-center rounded-full border-2 border-[#1F4E79] overflow-hidden">
+              <img src={member.icon} alt={member.name} className="h-full w-full object-cover" />
             </div>
 
             {/* name */}
@@ -46,7 +46,7 @@ function LeadershipTeam() {
             <h4 className="large-font mb-4" style={{ color: "#567C8D" }}> {member.title} </h4>
             
             {/* description */}
-            <p className="small-font mx-4" style={{ color: "#4B4B4B" }}> {member.body} </p>
+            <p className="small-font" style={{ color: "#4B4B4B" }}> {member.body} </p>
           
           </div>
         ))}

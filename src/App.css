@@ -10,6 +10,7 @@
 
   /* TYPE TOKENS */
   --font-sora: "Sora", sans-serif;
+  --font-geist: "Geist", sans-serif;
 
   --fs-display: 64px;  /* Hero titles */
   --fs-h2: 40px;       /* Section headers */
@@ -45,6 +46,12 @@ html,
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 /* VITE BOILERPLATE (SAFE TO IGNORE VISUALLY) */
@@ -143,11 +150,26 @@ body {
 /* TYPOGRAPHY */
 
 .hero-title {
-  font-size: var(--fs-display);
+  font-size: 2rem;
   font-family: var(--font-sora);
   font-weight: 600;
   letter-spacing: 0.02em;
   color: var(--color-primary);
+  line-height: 1.2;
+  margin-top: 3rem;
+}
+
+@media (min-width: 640px) {
+  .hero-title {
+    font-size: 3rem;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-title {
+    font-size: var(--fs-display);
+  }
 }
 
 .section-header {
@@ -168,7 +190,7 @@ body {
 
 .large-font {
   font-size: var(--fs-body-lg);
-  font-family: var(--font-sora);
+  font-family: var(--font-geist);
   font-weight: 300;
   letter-spacing: 0.02em;
   color: var(--color-slate);
@@ -184,7 +206,7 @@ body {
 
 .small-font {
   font-size: var(--fs-body);
-  font-family: var(--font-sora);
+  font-family: var(--font-geist);
   font-weight: 300;
   letter-spacing: 0;
   color: var(--color-slate);
@@ -202,8 +224,20 @@ body {
 
 .hero-banner {
   text-align: center;
-  padding: 8rem 2rem;
+  padding: 3rem 1rem;
   background-color: var(--color-sand);
+}
+
+@media (min-width: 768px) {
+  .hero-banner {
+    padding: 6rem 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-banner {
+    padding: 8rem 2rem;
+  }
 }
 
 .hero-banner-surface {
@@ -212,28 +246,90 @@ body {
   background-color: var(--color-surface);
 }
 
+.hero-banner-blue {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: rgba(200, 217, 230, 0.35);
+}
+
+@media (min-width: 768px) {
+  .hero-banner-blue {
+    padding: 6rem 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-banner-blue {
+    padding: 8rem 2rem;
+  }
+}
+
+.hero-banner-clear {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .hero-banner-clear {
+    padding: 6rem 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-banner-clear {
+    padding: 8rem 2rem;
+  }
+}
+
 .regular-banner-white {
   background-color: var(--color-white);
-  padding: 3rem 2rem;
+  padding: 3rem 1rem;
+}
+
+@media (min-width: 768px) {
+  .regular-banner-white {
+    padding: 3rem 2rem;
+  }
 }
 
 .regular-banner-sand {
   background-color: var(--color-sand);
-  padding: 3rem 2rem;
+  padding: 3rem 1rem;
+}
+
+@media (min-width: 768px) {
+  .regular-banner-sand {
+    padding: 3rem 2rem;
+  }
 }
 
 .regular-banner-blue {
-  background-color: rgba(200, 217, 230, 0.3);
-  padding: 3rem 2rem;
+  background-color: rgba(200, 217, 230, 0.35);
+  padding: 3rem 1rem;
+}
+
+@media (min-width: 768px) {
+  .regular-banner-blue {
+    padding: 3rem 2rem;
+  }
 }
 
 .regular-banner-surface {
   background-color: var(--color-surface);
-  padding: 3rem 2rem;
+  padding: 3rem 1rem;
+}
+
+@media (min-width: 768px) {
+  .regular-banner-surface {
+    padding: 3rem 2rem;
+  }
 }
 
 .hero-banner,
 .hero-banner-surface,
+.hero-banner-blue,
+.hero-banner-clear,
 .regular-banner-white,
 .regular-banner-sand,
 .regular-banner-blue,
@@ -280,6 +376,7 @@ body {
   color: var(--color-slate);
 }
 
+<<<<<<< HEAD
 /* UTILITY CLASSES */
 
 /* Text colors */
@@ -413,3 +510,5 @@ body {
   width: 350px;
   height: 350px;
 }
+=======
+>>>>>>> 782024c9d1ba3dfd2e0dd0e09b2473e6f0b15c4b

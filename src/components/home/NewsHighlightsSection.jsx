@@ -28,13 +28,23 @@ function NewsHighlightsSection() {
     <section className="regular-banner-sand relative overflow-hidden px-6 py-16">
       <div className="mx-auto max-w-5xl">
         <div className="mb-8 text-center">
+<<<<<<< HEAD
           <h2 className="section-header">News and Highlights</h2>
+=======
+          <h2 className="section-header text-3xl md:text-4xl lg:text-5xl" style={{ color: "#1F4E79" }}>
+            News and Highlights
+          </h2>
+>>>>>>> 782024c9d1ba3dfd2e0dd0e09b2473e6f0b15c4b
         </div>
         <div className="grid gap-6 md:grid-cols-2">
           {stories.map((story) => (
             <article
               key={story.title}
+<<<<<<< HEAD
               className="card flex h-full flex-col justify-between text-left"
+=======
+              className="flex h-full flex-col justify-between rounded-2xl bg-white p-6 text-left shadow-sm ring-1 ring-[#E5E7EB] drop-shadow hover:drop-shadow-lg transition-all duration-300"
+>>>>>>> 782024c9d1ba3dfd2e0dd0e09b2473e6f0b15c4b
             >
               <div className="flex items-center justify-between text-sm font-semibold">
                 <span className="rounded-full bg-sky px-3 py-1 text-primary">

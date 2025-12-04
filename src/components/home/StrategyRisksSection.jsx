@@ -43,28 +43,40 @@ const risks = [
  */
 function StrategyRisksSection() {
   return (
-    <section className="regular-banner-white relative overflow-hidden">
-      <div className="mx-auto max-w-4xl text-center">
-        {/* Section heading and subheading */}
-        <h2 className="section-header mb-4">
+    <section className="regular-banner-white flex flex-col items-center px-4 md:px-6">
+      {/* Heading */}
+      <div className="max-w-4xl text-center">
+        <h2 className="section-header mb-4 text-3xl md:text-4xl lg:text-5xl" style={{ color: "#1F4E79" }}>
           Evolve Your AI Strategy with Complete Control.
         </h2>
-        <h3 className="subheader">
+        <h3 className="subheader text-base md:text-xl lg:text-2xl" style={{ color: "#4B4B4B" }}>
           Traditional AI management creates hidden risks. Mill Pond turns them into insight.
         </h3>
       </div>
 
-      {/* Grid of risks */}
-      <div className="risks-grid">
-        {risks.map((risk) => (
-          <div key={risk.title} className="risk-item text-center">
-            <div className="risk-icon-circle">
-              <img src={risk.icon} alt={risk.title} className="h-8 w-8" />
+      {/* 2x2 grid */}
+      <div className="mx-4 md:mx-12 lg:mx-24 my-8 md:my-12 w-full max-w-4xl">
+        <div className="grid gap-8 md:gap-12 lg:gap-20 grid-cols-1 md:grid-cols-2" style={{ margin: '0 auto', width: '100%' }}>
+          {risks.map((risk) => (
+            <div key={risk.title} className="flex flex-col items-center text-center px-4">
+              
+              {/* icon */}
+              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full">
+                <img src={risk.icon} alt={risk.title} className="h-10 w-10" />
+              </div>
+
+              {/* title */}
+              <h4 className="mb-2 text-lg md:text-xl font-semibold" style={{ color: "#1F4E79" }}>
+                {risk.title}
+              </h4>
+
+              {/* description */}
+              <p className="text-sm md:text-base leading-relaxed" style={{ color: "#4B4B4B" }}>
+                {risk.body}
+              </p>
             </div>
-            <h4 className="risk-title">{risk.title}</h4>
-            <p className="risk-body">{risk.body}</p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
       {/* Decorative shape floating behind content */}

@@ -86,6 +86,7 @@ function ApproachSecuritySection() {
   return (
     <section className="regular-banner-sand relative overflow-hidden px-6 py-20">
       <div className="mx-auto flex max-w-4xl flex-col gap-10">
+<<<<<<< HEAD
         <h2 className="section-header text-center">
           Our Approach to AI Security.
         </h2>
@@ -107,6 +108,63 @@ function ApproachSecuritySection() {
               <div className="cell-title">
                 <h4 className="small-font-bold mb-2">{row.title}</h4>
                 <p className="small-font leading-relaxed">{row.description}</p>
+=======
+        <h2 className="section-header text-center text-3xl md:text-4xl lg:text-5xl" style={{ color: "#1F4E79" }}>
+          Our Approach to AI Security.
+        </h2>
+
+        <div className="rounded-3xl bg-white py-6 px-6 md:py-8 md:px-12 shadow-sm" style={{ backgroundColor: '#FFFFFF', borderRadius: '1.5rem' }}>
+          {/* Header - hidden on mobile, shown on desktop */}
+          <div
+            className="hidden md:flex mb-6 items-center gap-6 border-b border-[#E5E7EB] pb-6 text-base font-semibold"
+            style={{ color: "black" }}
+          >
+            <span className="flex-1 text-left px-2"></span>
+            <span className="large-font-bold text-center flex-shrink-0 px-2 w-32">Prompt-Based AI security</span>
+            <span className="large-font-bold text-center flex-shrink-0 px-2 w-32">Model-Based</span>
+          </div>
+          <div className="divide-y divide-[#E5E7EB]">
+            {comparisonRows.map((row) => (
+              <div key={row.title} className="py-6 md:py-6">
+                {/* Mobile layout - stacked */}
+                <div className="md:hidden flex flex-col gap-3">
+                  <div className="text-left">
+                    <h4 className="small-font-bold mb-2 text-sm font-bold" style={{ color: "#1F4E79" }}>
+                      {row.title}
+                    </h4>
+                    <p className="small-font text-sm leading-relaxed text-left" style={{ color: "#4B4B4B" }}>
+                      {row.description}
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-4 justify-start">
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs font-semibold" style={{ color: "#1F4E79" }}>Prompt-Based:</span>
+                      <Indicator type={row.promptBased} />
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs font-semibold" style={{ color: "#1F4E79" }}>Model-Based:</span>
+                      <Indicator type={row.modelBased} />
+                    </div>
+                  </div>
+                </div>
+                {/* Desktop layout - horizontal */}
+                <div className="hidden md:flex mb-2 items-center gap-6">
+                  <div className="flex-1 text-left px-2">
+                    <h4 className="small-font-bold mb-2 text-sm font-bold" style={{ color: "#1F4E79" }}>
+                      {row.title}
+                    </h4>
+                    <p className="small-font text-sm leading-relaxed text-left" style={{ color: "#4B4B4B" }}>
+                      {row.description}
+                    </p>
+                  </div>
+                  <div className="flex w-32 items-center justify-center flex-shrink-0 px-2">
+                    <Indicator type={row.promptBased} />
+                  </div>
+                  <div className="flex w-32 items-center justify-center flex-shrink-0 px-2">
+                    <Indicator type={row.modelBased} />
+                  </div>
+                </div>
+>>>>>>> 782024c9d1ba3dfd2e0dd0e09b2473e6f0b15c4b
               </div>
               <div className="cell-indicator">
                 <Indicator type={row.promptBased} />

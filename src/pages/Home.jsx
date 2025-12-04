@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import HeroSection from "../components/home/HeroSection";
 import StrategyRisksSection from "../components/home/StrategyRisksSection";
 import ApproachSecuritySection from "../components/home/ApproachSecuritySection";
@@ -8,6 +9,21 @@ import AdvantagesSection from "../components/home/AdvantagesSection";
 import PartnersSection from "../components/home/PartnersSection";
 import RoiSection from "../components/home/RoiSection";
 import ContactSection from "../components/home/ContactSection";
+=======
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+
+import HeroSection from "../components/home/HeroSection.jsx";
+import StrategyRisksSection from "../components/home/StrategyRisksSection.jsx";
+import ApproachSecuritySection from "../components/home/ApproachSecuritySection.jsx";
+import RoleCardsSection from "../components/home/RoleCardsSection.jsx";
+import NewsHighlightsSection from "../components/home/NewsHighlightsSection.jsx";
+import SolutionsSection from "../components/home/SolutionsSection.jsx";
+import AdvantagesSection from "../components/home/AdvantagesSection.jsx";
+import PartnersSection from "../components/home/PartnersSection.jsx";
+import RoiSection from "../components/home/RoiSection.jsx";
+import ContactSection from "../components/home/ContactSection.jsx";
+>>>>>>> 782024c9d1ba3dfd2e0dd0e09b2473e6f0b15c4b
 
 /**
  * Home page component that composes all modular sections for the landing

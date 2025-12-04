@@ -30,7 +30,11 @@ function RoleCardsSection() {
     <section className="regular-banner-white relative overflow-hidden px-6 py-20">
       <div className="mx-auto max-w-6xl">
         <div className="mb-10 text-center">
+<<<<<<< HEAD
           <h2 className="section-header">
+=======
+          <h2 className="section-header text-3xl md:text-4xl lg:text-5xl" style={{ color: "#1F4E79" }}>
+>>>>>>> 782024c9d1ba3dfd2e0dd0e09b2473e6f0b15c4b
             Every Role Faces a Different Challenge.
           </h2>
           <h3 className="subheader">
@@ -39,8 +43,16 @@ function RoleCardsSection() {
         </div>
         <div className="grid gap-6 md:grid-cols-3">
           {roles.map((role) => (
+<<<<<<< HEAD
             <div key={role.title} className="card text-left">
               <h4 className="large-font-bold mb-2 text-primary">
+=======
+            <div
+              key={role.title}
+              className="rounded-2xl bg-white p-6 text-left shadow-sm ring-1 ring-[#E5E7EB] drop-shadow hover:drop-shadow-lg transition-all duration-300"
+            >
+              <h4 className="mb-2 text-xl font-semibold" style={{ color: "#1F4E79" }}>
+>>>>>>> 782024c9d1ba3dfd2e0dd0e09b2473e6f0b15c4b
                 {role.title}
               </h4>
               <p className="small-font leading-relaxed">

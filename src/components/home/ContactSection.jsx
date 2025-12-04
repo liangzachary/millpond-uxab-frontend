@@ -48,6 +48,7 @@ function ContactSection() {
   }, []);
 
   return (
+<<<<<<< HEAD
     <section className="regular-banner-white relative overflow-hidden px-6 py-20">
       <div className="mx-auto flex max-w-4xl flex-col items-center gap-8">
         <div className="text-center">
@@ -55,11 +56,25 @@ function ContactSection() {
             Ready to Take Control of Your AI Future?
           </h2>
           <p className="large-font mt-2">
+=======
+    <section id="contact-section" className="regular-banner-white px-6 py-20">
+      <div className="mx-auto flex max-w-7xl flex-col items-center gap-8">
+        <div className="text-center">
+          <h2 className="section-header text-3xl md:text-4xl lg:text-5xl" style={{ color: "#1F4E79" }}>
+            Ready to Take Control of Your AI Future?
+          </h2>
+          <p className="subheader mx-2">
+>>>>>>> 782024c9d1ba3dfd2e0dd0e09b2473e6f0b15c4b
             Contact us to discover how Mill Pond Research can evolve your
             organization's approach to AI security and orchestration.
           </p>
         </div>
+<<<<<<< HEAD
         <div className="card w-full bg-sky text-left">
+=======
+
+        <div className="w-full rounded-2xl bg-[#E2ECF4] p-8 text-left shadow-sm max-w-4xl">
+>>>>>>> 782024c9d1ba3dfd2e0dd0e09b2473e6f0b15c4b
           <div id="hubspot-form-main" data-hs-forms-root="true" />
           <button
             id="fallback-button"
